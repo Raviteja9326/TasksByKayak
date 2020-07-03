@@ -1,0 +1,450 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 mb-2 order-md-1">
+            <mat-card>
+                <mat-card-header class="float-left">
+                    <mat-card-title>Paitent Details</mat-card-title>
+                </mat-card-header>
+                <mat-card-header class="float-right">
+                    <span class="material-icons pr-2">
+                        create
+                    </span>
+                    <span class="material-icons">
+                        add
+                    </span>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <form [formGroup]="patient">
+                        <mat-form-field appearance="outline" class="d-block">
+                            <mat-label>Name</mat-label>
+                            <input matInput class="col-lg-12" formControlName="names" placeholder="Placeholder">
+                            <mat-error *ngIf="patient.get('names').hasError('required')">
+                                <sup class="required" title="Required">*</sup>Field is Required!
+                            </mat-error>
+                        </mat-form-field>
+                        <div class="form-group row">
+                            <p class="col-lg-4">DOB:<span class="pl-2">17/11/1991</span></p>
+                            <p class="col-lg-4">Age:<span class="pl-2">22</span></p>
+                            <p class="col-lg-4">Gender:<span class="pl-2">M</span></p>
+                        </div>
+                        <div class="form-group row">
+                            <p class="col-lg-4">Ins:<span class="pl-2">cvsk</span></p>
+                            <p class="col-lg-4">Group:<span class="pl-2">Gca165</span></p>
+                            <p class="col-lg-4">Rel:<span class="pl-2">Child</span></p>
+                        </div>
+                        <div class="form-group row">
+                            <p class="col-lg-4">Rel:<span class="pl-2">Child</span></p>
+                            <p class="col-lg-8">Address:<span class="pl-2">Hyderdad</span></p>
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-lg-8 mb-2 order-md-4">
+            <mat-card>
+                <div class="float-left">
+                    <mat-card-header>
+                        <mat-card-title>Rx Details</mat-card-title>
+                    </mat-card-header>
+                </div>
+                <div class="float-right">
+                    <mat-card-header>
+                        <span class="pr-4" style="
+                        position: relative;
+                        top: 6px;
+                    ">
+                            <mat-checkbox class="example-margin">Piorty</mat-checkbox>
+                        </span>
+                        <span class="pr-3">
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Orderdate</label>
+                                <div class="col-sm-9">
+                                    <input type="date" class="form-control" id="inputEmail3" placeholder="Email">
+                                </div>
+                            </div>
+                        </span>
+                        <span class="pr-3">
+                            <div class="row">
+                                <label for="inputEmail3" class="col-sm-4 col-form-label">Refill Qty</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                                </div>
+                            </div>
+                        </span>
+                        <span class="material-icons">
+                            add
+                        </span>
+                    </mat-card-header>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <mat-card-content>
+                    <p>retails(0)</p>
+                </mat-card-content>
+            </mat-card>
+            <div class="row">
+                <div class="col-lg-12 mt-2 sec order-md-5">
+                    <mat-card>
+                        <mat-card-content>
+                            <form [formGroup]="retail">
+                                <div class="row">
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names1"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names1').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names2"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names2').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names3"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names3').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names4"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names4').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names14"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names14').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names5"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names5').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names6"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names6').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names7"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names7').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names8"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names8').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names9"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names9').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-4">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-lg-8" formControlName="names10"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names10').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-8">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names11" placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names11').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-8">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput class="col-md-8" formControlName="names12"
+                                                    placeholder="Cash">
+                                                <mat-error *ngIf="retail.get('names12').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                </div>
+                            </form>
+                        </mat-card-content>
+                        <mat-card-content class="secs" style="
+                        background: #f7f7f7;
+                    ">
+                            <form [formGroup]="retails">
+                                <div class="row">
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names99" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names99').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names98" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names98').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names97" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names97').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names96" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names96').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names95" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names95').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names94" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names94').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names93" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names93').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names92" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names92').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names91" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names91').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names90" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names90').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                                <div class="row">
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names89" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names89').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+                                    <p class="col-lg-6">Bill To<span>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="names88" placeholder="Cash">
+                                                <mat-error *ngIf="retails.get('names88').hasError('required')">
+                                                    <sup class="required" title="Required">*</sup>Field is Required!
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </span></p>
+
+                                </div>
+                            </form>
+                        </mat-card-content>
+
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 mb-2 order-md-2">
+            <mat-card>
+                <mat-card-header class="float-left">
+                    <mat-card-title>Prescriber Details</mat-card-title>
+                </mat-card-header>
+                <mat-card-header class="float-right">
+                    <span class="material-icons pr-2">
+                        create
+                    </span>
+                    <span class="material-icons">
+                        add
+                    </span>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <form [formGroup]="Prescriber">
+                        <mat-form-field appearance="outline" class="d-block">
+                            <mat-label>Name</mat-label>
+                            <input matInput class="col-lg-12" formControlName="names" placeholder="Placeholder">
+                            <mat-error *ngIf="Prescriber.get('names').hasError('required')">
+                                <sup class="required" title="Required">*</sup>Field is Required!
+                            </mat-error>
+                        </mat-form-field>
+                        <div class="form-group row">
+                            <p class="col-lg-4">DOB:<span class="pl-2">17/11/1991</span></p>
+                            <p class="col-lg-4">Age:<span class="pl-2">22</span></p>
+                            <p class="col-lg-4">Gender:<span class="pl-2">M</span></p>
+                        </div>
+                        <div class="form-group row">
+                            <p class="col-lg-4">Ins:<span class="pl-2">cvsk</span></p>
+                            <p class="col-lg-4">Group:<span class="pl-2">Gca165</span></p>
+                            <p class="col-lg-4">Rel:<span class="pl-2">Child</span></p>
+                        </div>
+                        <div class="form-group row">
+                            <p class="col-lg-12">Address:<span class="pl-2">Hyderdad</span></p>
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 order-md-3">
+            <mat-card>
+                <mat-card-header class="float-left">
+                    <mat-card-title>Drug Details</mat-card-title>
+                </mat-card-header>
+                <mat-card-header class="float-right">
+                    <span class="material-icons pr-2">
+                        create
+                    </span>
+                    <span class="material-icons">
+                        add
+                    </span>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <form [formGroup]="Drug">
+                        <mat-form-field appearance="outline" class="d-block">
+                            <mat-label>Name</mat-label>
+                            <input matInput class="col-lg-12" formControlName="names" placeholder="Placeholder">
+                            <mat-error *ngIf="Drug.get('names').hasError('required')">
+                                <sup class="required" title="Required">*</sup>Field is Required!
+                            </mat-error>
+                        </mat-form-field>
+                        <div class="form-group row">
+                            <p class="col-lg-4">DOB:<span class="pl-2">17/11/1991</span></p>
+                            <p class="col-lg-4">Age:<span class="pl-2">22</span></p>
+                            <p class="col-lg-4">Gender:<span class="pl-2">M</span></p>
+                        </div>
+                        <div class="form-group row">
+                            <p class="col-lg-4">Ins:<span class="pl-2">cvsk</span></p>
+                            <p class="col-lg-4">Group:<span class="pl-2">Gca165</span></p>
+                            <p class="col-lg-4">Rel:<span class="pl-2">Child</span></p>
+                        </div>
+                        <div class="form-group row">
+                            <p class="col-lg-4">Rel:<span class="pl-2">Child</span></p>
+                            <p class="col-lg-4">Address:<span class="pl-2">Hyderdad</span></p>
+                            <p class="col-lg-4">Rel:<span class="pl-2">Child</span></p>
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

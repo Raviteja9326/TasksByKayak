@@ -1,0 +1,69 @@
+<div class="text-center mt-4 mb-4">
+    <button type="reset" class="btn btn-danger" (click)="sor()">{{buttonName}}</button>
+</div>
+
+<div *ngIf="setting">
+    <form [formGroup]="form">
+        <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def"><span
+                class="pr-3">{{cd.label}}</span></mat-checkbox>
+    </form>
+</div>
+<div *ngIf="!(setting)">
+    <mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+        <ng-container matColumnDef="Sno">
+            <mat-header-cell *matHeaderCellDef> S.no </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Sno}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="DOB">
+            <mat-header-cell *matHeaderCellDef> Date of Birth </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.DOB}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="gender">
+            <mat-header-cell *matHeaderCellDef> gender </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.gender}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+            <mat-header-cell *matHeaderCellDef> address </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="address1">
+            <mat-header-cell *matHeaderCellDef> address1 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.address1}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="address2">
+            <mat-header-cell *matHeaderCellDef> address2 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.address2}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="state">
+            <mat-header-cell *matHeaderCellDef> state </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="city">
+            <mat-header-cell *matHeaderCellDef> city </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.city}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="pincode">
+            <mat-header-cell *matHeaderCellDef> pincode </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.pincode}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="educationaldetails">
+            <mat-header-cell *matHeaderCellDef> educationaldetails </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.educationaldetails}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="getDisplayedColumns()">
+        </mat-header-row>
+        <mat-row *matRowDef="let row; columns: getDisplayedColumns()"></mat-row>
+    </mat-table>
+</div>
